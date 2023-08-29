@@ -4,7 +4,6 @@ import GImage from './env/image';
 import GWebGLRenderingContext from './context/webgl/RenderingContext';
 import GContext2D from './context/2d/RenderingContext';
 
-import GBridgeWeex from './bridge/weex';
 import GBridgeReactNative from './bridge/react-native';
 
 export let Image = GImage;
@@ -43,7 +42,7 @@ export function enable(
     GBridge.callEnableDisableCombo();
   }
 
-  var canvas = new GCanvas(el.ref, {
+  const canvas = new GCanvas(el.ref, {
     isAutoClearRectBeforePutImageData,
     isResetGlViewportAfterSetWidthOrHeight,
     devicePixelRatio,
